@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.app-bg{
+  height: 100vh;
+  background: #000;
+}
+.logo{
+  height: 300px;
+}
+.logo img{
+  height: 100%;
+}
+.height-100{
+  height: 100vh;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar{
+  height: 80px;
+  background: #6f6f6f36;
+  position: fixed;
+  width: -webkit-fill-available;
+  padding: 0 40px;
+}
+.flex-space{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1{
+  color: #FFEA1F;
+  font-size: 18px;
+  letter-spacing: 0.0734rem;
+}
+.selectbtn{
+  min-width: 150px;
+  height: 35px;
+  border-radius: 25px;
+  background: black;
+  border: 1px solid #FCE71F;
+  color: #ddd;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.selectbtn:focus, .selectbtn:focus {
+  outline: none !important;
+}
+.selectbtn ul{
+  background: white;
+  cursor: pointer;
+}
+.selectbtn ul li:hover{
+  background: #FCE71F;
+}
