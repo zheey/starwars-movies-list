@@ -49,16 +49,17 @@ class LandingPage extends Component{
 
     /*function to select a movies and display movie */
     showFilm = (i) =>{
-        console.log("got here")
 
-        this.setState({showCrawl: false, loadingFilm: true}, () =>{
-            clearTimeout(this.timer)
-            this.setState({currentMovie: i})
+        if(i !== "no") {
+            this.setState({showCrawl: false, loadingFilm: true}, () => {
+                clearTimeout(this.timer)
+                this.setState({currentMovie: i})
 
-            //getting cast for a movie
-           this.getAllCasts()
-            //this.timer = setTimeout(() => {this.setState({showCrawl: false, showTable: true})}, 100)
-        })
+                //getting cast for a movie
+                this.getAllCasts()
+                //this.timer = setTimeout(() => {this.setState({showCrawl: false, showTable: true})}, 100)
+            })
+        }
 
     }
 
@@ -86,7 +87,7 @@ class LandingPage extends Component{
             this.getSumHeight(heightArray.slice(this.state.currentNavIndex, this.state.nextNavIndex))
 
             //set timer to remove animated crawl
-            this.timer = setTimeout(() => {this.setState({showCrawl: false, showTable: true})}, 1000)
+            this.timer = setTimeout(() => {this.setState({showCrawl: false, showTable: true})}, 20000)
         }else{
             this.setState({loadingFilm: false})
         }
