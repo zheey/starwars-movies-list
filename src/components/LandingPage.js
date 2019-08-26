@@ -228,7 +228,9 @@ class LandingPage extends Component{
             }
 
             //get sum of heights
-            this.getSumHeight(heightArray.slice(this.state.currentNavIndex, this.state.nextNavIndex))
+            if(heightArray.length > 0) {
+                this.getSumHeight(heightArray.slice(0, 10))
+            }
 
             let num = Math.ceil(newCast.length / this.state.navDiff)
 
