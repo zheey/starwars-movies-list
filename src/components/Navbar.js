@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Navbar = (props) =>{
-    const {films, showFilm} = props
+    const {films, showFilm, goHome} = props
     return(
         <div className="navbar flex-space">
-            <h1>
+            <h1 onClick={e =>{goHome()}}>
                 Movie List
             </h1>
             <select className="selectbtn" onChange={e => {showFilm(e.target.value)}}>

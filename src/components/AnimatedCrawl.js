@@ -9,9 +9,9 @@ const AnimatedCrawl = (props) =>{
             <section className="star-wars">
                 <div className="crawl">
                     <div className="title">
-                        <p>
+                        <h1>
                             {state.movies[state.currentMovie].title}
-                        </p>
+                        </h1>
                     </div>
                     <p dangerouslySetInnerHTML={{__html: state.movies[state.currentMovie].opening_crawl}} className="font-15"></p>
 

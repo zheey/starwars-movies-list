@@ -13,8 +13,10 @@ code {
 }
 
 .app-bg{
-  height: 100vh;
+  /*height: 100vh;*/
   background: #000;
+  min-height: 100vh;
+  width: 100%;
 }
 .logo{
   height: 300px;
@@ -32,7 +34,7 @@ code {
 }
 .navbar{
   height: 80px;
-  background: #6f6f6f36;
+  background: #1d1d1d;
   position: fixed;
   width: -webkit-fill-available;
   padding: 0 40px;
@@ -79,35 +81,23 @@ code {
   font-weight:normal;
 }*/
 
-.fade {
-  position: relative;
-  width: 100%;
-  min-height: 60vh;
-  top: -25px;
-  background-image: linear-gradient(0deg, transparent, black 75%);
-  z-index: 1;
-}
 
 .star-wars {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  height: 800px;
-  color: #feda4a;
-  font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 500%;
-  font-weight: 600;
-  letter-spacing: 6px;
-  line-height: 150%;
-  perspective: 400px;
-  text-align: justify;
+  perspective: 50px;
+  min-height: 100vh;
+
 }
 
 .crawl {
-  position: relative;
-  top: 99999px;
+
+  margin: 0 auto;
+  color: #fcd000;
+  font-size: 30px;
+  font-weight: bold;
+  width: 600px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  transform: rotateX(70deg);
+  animation: animateCrawl 35s
 }
 
 .crawl > .title {
@@ -120,7 +110,16 @@ code {
   text-transform: uppercase;
 }
 
-@keyframes crawl {
+.loader{
+  color: white;
+}
+
+@keyframes animateCrawl {
+  0% { transform: rotateX(20deg) translateY(400px); }
+  100% { transform: rotateX(25deg) translateY(-300px); }
+}
+
+/*@keyframes crawl {
   0% {
     top: -100px;
     transform: rotateX(20deg)  translateZ(0);
@@ -129,4 +128,134 @@ code {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
+}*/
+
+.details-div{
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+
+.table th{
+  color: #9a9a9a;
+  text-transform: uppercase;
+  letter-spacing: 0.093rem;
+  font-size: 14px;
+  position: relative;
+}
+.table{
+  width: 75%;
+  margin: auto;
+  text-align: left;
+}
+.th{
+  height: 50px !important;
+  background: #191717;
+
+}
+.table th{
+  padding: 0 10px;
+}
+.table td{
+  padding: 20px 10px;
+  border: 1px solid #312f2f;
+  color: #ddd;
+}
+.bg-yellow{
+  background: #3c38138a;
+}
+.avatar{
+  height: 30px;
+}
+.avatar img{
+  height: 100%;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.z-not-left i{
+  color: #fff;
+  font-size: 9px;
+}
+.z-not-left{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #fcd000;
+  box-shadow: 0 3px 4px #fcd0005e;
+  cursor: pointer;
+}
+.z-not-right {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: rgba(153, 153, 153, 1);
+  font-size: 12px;
+  border: 1px solid #fcd000;
+  cursor: pointer;
+}
+.z-nav-holder-p{
+  color: rgba(153, 153, 153, 1);
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.z-nav-holder{
+  width: 16% !important;
+  margin: 6% auto auto !important;
+}
+.z-gr-div{
+  /* position: relative; */
+  width: 25%;
+  /* left: 37%; */
+  margin: 65px 0 40px;
+
+}
+
+.z-flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.z-flex-column-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.z-flex-space{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.z-disabled{
+  cursor: not-allowed;
+}
+.z-width-35{
+  width: 35% !important;
+}
+.z-not-left img{
+  height: 11px;
+}
+.filter{
+  height: 14px;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 17px;
+}
+.input:focus, .input:active{
+  outline: none;
+}
+.input{
+  height: 35px;
+  border-radius: 30px;
+  background: #54545463;
+  width: 301px;
+  border: 1px solid #ffea1f3b;
+  margin: 2% 0 4%;
+  color: white;
+  text-align: center;
+}
+.no-data{
+  color: white;
+  text-align: center;
+
 }
