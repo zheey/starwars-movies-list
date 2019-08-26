@@ -222,6 +222,14 @@ class LandingPage extends Component{
                 return cast.gender.toLowerCase() === filtercast.toLowerCase()
             })
 
+            let heightArray =  []
+            for(let cast of newCast){
+                heightArray.push(cast.height)
+            }
+
+            //get sum of heights
+            this.getSumHeight(heightArray.slice(this.state.currentNavIndex, this.state.nextNavIndex))
+
             let num = Math.ceil(newCast.length / this.state.navDiff)
 
             this.setState({casts: newCast, noOfPages: num, currentNavIndex: 0, nextNavIndex: 10, currentPage: 1})
